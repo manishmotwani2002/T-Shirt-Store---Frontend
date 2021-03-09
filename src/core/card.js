@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Imagehelper from './helper/Imagehelper';
 import { Redirect } from 'react-router-dom';
 import { addItemToCart, removeItemFromCart } from './helper/Carthelper';
+import { isAuthenticated } from '../auth/helper';
 
 const Card = ({
 	product,
@@ -26,8 +27,10 @@ const Card = ({
 	};
 
 	const getARedirect = (redirect) => {
-		if (redirect) {
+		if (redirect && isAuthenticated()) {
 			return <Redirect to="/user/cart" />;
+		} else if (redirect) {
+			return <Redirect to="/signin" />;
 		}
 	};
 
@@ -60,7 +63,7 @@ const Card = ({
 
 	return (
 		<div className="card text-white card-colour border border-info ">
-			<div className="card-header lead ">{cardTitle}</div>
+			<div className="card-header lead ">Author:- {cardTitle}</div>
 			<div className="card-body">
 				{getARedirect(redirect)}
 				<Imagehelper product={product} />

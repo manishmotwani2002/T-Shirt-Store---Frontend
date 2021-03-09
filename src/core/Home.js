@@ -26,7 +26,7 @@ export default function Home() {
 	return (
 		<div>
 			{/* <h1 className="text-white">Welcome to the upside down!!</h1> */}
-			<Base title="Home Page" description="this the home page of the application">
+			<Base title="Welcome to our Store" description="Our Products">
 				<div className="row text-center">
 					<div className="row">
 						{products.map((product, index) => {

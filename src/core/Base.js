@@ -21,9 +21,12 @@ const Base = ({
 			<footer className="footer mt-auto footer-padding">
 				<div className="container-fluid nav-colour px-2 text-right">
 					<span className="px-2 text-white font-weight-bold">For Any Query: </span>
-					<button className="btn btn-light btn-large font-weight-bold">
+					<a
+						class="btn btn-light btn-large font-weight-bold"
+						href="https://www.linkedin.com/in/manish-motwani-76729a148"
+						role="button">
 						Contact-Us
-					</button>
+					</a>
 				</div>
 				<span className="text-muted ">
 					<center>@Created With Love By: Manish Motwani</center>
